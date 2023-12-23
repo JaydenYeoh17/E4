@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    </head>
+    <body>
+
+<a-scene>
+<!-- Asset Management System -->
+<a-assets>
+    <a-assets-item id="village" src="scene.gltf"></a-assets-item>
+</a-assets>
+<a-entity gltf-model="#village"></a-entity>
+
+<a-box width="1" height="1" depth="0.5" position="7 6 0" color="yellow" 
+animation__drive="dur:5000; easing: linear; from:7 6 0; to:7 2 0; loop:-1; property: position"></a-box>
+
+<a-box width="1" height="1" depth="0.5" position="-25 8 3" color="blue"
+animation__drive="dur:5000; easing: linear; from:-25 8 3; to:25 8 3; loop:-1; property: position">
+<a-animation attribute="material.color" from="blue" to="red" dur="3000" repeat="indefinite"></a-animation>
+<a-animation attribute="position" dur="3000" from="-3 0 0" to="3 0 0" repeat="indefinite"></a-animation>
+</a-box>
+
+</a-scene>
+    </body>
+</html>
